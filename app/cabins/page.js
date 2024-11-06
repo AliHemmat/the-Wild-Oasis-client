@@ -5,6 +5,9 @@ export const metadata = {
   title: "our little Paradise",
 };
 
+// configure caching revalidation (in seconds)
+export const revalidate = 3600;
+
 export default function Page() {
   // getting data from
 

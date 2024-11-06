@@ -51,6 +51,18 @@ export const getCabins = async function () {
   return data;
 };
 
+// cabins Count
+export const getCabinsCount = async function () {
+  const { data, error } = await supabase.from("cabins").select("id");
+
+  console.log("test data CabinsCount =>>>", data.length);
+  if (error) {
+    console.error(error);
+    // throw new Error("Cabins could not be loaded");
+  }
+
+  return data.length;
+};
 // Guests are uniquely identified by their email address
 export async function getGuest(email) {
   const { data, error } = await supabase
