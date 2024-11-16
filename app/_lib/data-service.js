@@ -42,7 +42,6 @@ export const getCabins = async function () {
     .select("id, name, maxCapacity, regularPrice, discount, image")
     .order("name");
 
-  console.log("test data =>>>", data);
   if (error) {
     console.error(error);
     // throw new Error("Cabins could not be loaded");
@@ -55,7 +54,6 @@ export const getCabins = async function () {
 export const getCabinsCount = async function () {
   const { data, error } = await supabase.from("cabins").select("id");
 
-  console.log("test data CabinsCount =>>>", data.length);
   if (error) {
     console.error(error);
     // throw new Error("Cabins could not be loaded");

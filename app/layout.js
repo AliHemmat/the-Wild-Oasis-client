@@ -15,13 +15,13 @@ export const metadata = {
 };
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={josefin.className}>
       <body
-        className={`bg-primary-950 antialiased text-primary-100 min-h-screen relative ${josefin.className} flex flex-col`}
+        className={`${josefin.className} bg-primary-950 antialiased text-primary-100 min-h-screen relative  flex flex-col`}
       >
         <Header />
         <div className="flex-1 px-8 p-12">
-          <main className="max-w-7xl mx-auto w-full">{children}</main>
+          <main className={`max-w-7xl mx-auto w-full `}>{children}</main>
         </div>
       </body>
     </html>
